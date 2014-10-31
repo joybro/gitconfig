@@ -1,0 +1,49 @@
+[user]
+    name = Young Han Lee 
+    email = y.lee@lge.com
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+    pager = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[core]
+    excludesfile = ~/.gitignore
+    pager = less -FRSX
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    editor = vi
+
+[merge]
+    tool = vimdiff
+
+[alias]
+    co = checkout
+    lg = log --decorate=short
+    br = branch
+    st = status
+    cm = commit
+    go = log --graph  --oneline --decorate=short
+    gr = log --graph  --oneline --decorate=short --all
+    gd = log --graph --decorate=short --all --pretty=format:'%C(yellow)%h%Creset %C(green)%cd%C(bold yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --date=short
+
+[commit]
+    template = /home/ylee/git-templates/commit-template-stripped.txt
